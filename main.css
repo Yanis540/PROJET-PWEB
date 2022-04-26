@@ -5,6 +5,8 @@
     --global-side-padding:120px;
     --padding-button:10px;
     --border-radius:10px;
+    --landing-logo-height:150px;
+    --landing-logo-width:300px;
 }
 
 *{
@@ -12,11 +14,11 @@
     padding:0;
     margin:0;
 }
-::-webkit-scrollbar {
-    width: 1.4em;
+body::-webkit-scrollbar {
+    width: 1em;
     background-color: var(--blue-color);
 }
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,html::-webkit-scrollbar {
     background-color: rgba(255,255,255,1);
 } 
 a{
@@ -31,6 +33,13 @@ html {
     font-weight: 500;
     line-height: 1;
     scroll-behavior: smooth;
+-webkit-font-smoothing: antialiased;
+
+}
+body{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
 }
 .background{
     height: 100VH;
@@ -137,12 +146,15 @@ img.nav-logo
     font-size: 0.8rem;
     font-weight: 800;
     /* padding: 0 30px; */
+    max-width: 100%;
+
     padding-left: 0;
     padding-right: 60px;
     line-height: 1.1;
 }
 .landing-logo
 {
+    grid-column: 1/2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,8 +162,8 @@ img.nav-logo
 img.landing-logo-img
 {
     display: inline-block;
-    height: 150px;
-    width: 300px;
+    height: var(--landing-logo-height);
+    width: var(--landing-logo-width);
 }
 h1.landing-desc-title {
     font-size: 2.5em;
@@ -210,10 +222,10 @@ a.about:hover{
 .landing-right
 {
     grid-column: 2/3;
-    display: grid;
-    vertical-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
+    width:100%;
    
 }
 img.floating-space 
@@ -222,11 +234,17 @@ img.floating-space
     height: 500px;
     width: 100%;
     flex-shrink: 0;
+
 }
+
 .event-page
 {
     background: transparent;
 }
+
+
+
+
 @media screen and (max-width:1005px) 
 { 
     :root{
@@ -245,6 +263,7 @@ img.floating-space
 { 
     :root{
         --global-side-padding:50px;
+        
     }
     
     .navbar-right{
@@ -256,6 +275,11 @@ img.floating-space
 {
     :root{
         --global-side-padding:30px;
+        --landing-logo-height:100px;
+        --landing-logo-width:200px;
+    }
+    .landing-left{
+        padding-right: 0;;
     }
     
 }
