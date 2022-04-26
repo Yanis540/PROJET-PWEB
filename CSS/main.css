@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
 :root{
-    --blue-color:#04294F;
-    --white-color:#ffffff ;
+    --background-color:#202c38;
+    --background-color-secondary:#04294F;
+    --front-color:#ffffff ;
     --global-side-padding:120px;
     --padding-button:10px;
     --border-radius:10px;
@@ -20,10 +21,13 @@
     box-sizing: border-box;
     padding:0;
     margin:0;
+    transition: background 100ms ease-in-out,
+    color 100ms ease-in-out;
 }
 body::-webkit-scrollbar {
-    width: 1em;
-    background-color: var(--blue-color);
+    width: .5em;
+    /* background-color: #04294F; */
+    
 }
 ::-webkit-scrollbar-thumb,html::-webkit-scrollbar {
     background-color: rgba(255,255,255,1);
@@ -32,7 +36,7 @@ a{
     text-decoration: none;
     font-size: 1rem;
     font-weight: bolder;
-    color:var(--white-color);
+    color:var(--front-color);
 }
 html {
     font-family:var(--primary-font-family);
@@ -46,12 +50,11 @@ html {
 body{
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-
 }
 .background{
     height: 100VH;
     width: 100VW;
-    background-color: var(--blue-color);
+    background-color: var(--background-color);
     z-index: -1;
     position: fixed;
 }
@@ -64,18 +67,21 @@ body{
     padding:0 var(--global-side-padding);
 }
 .impaire{
-    color:var(--white-color);
-    background: var(--blue-color);
+    color:var(--front-color);
+    background: var(--background-color);
 }
 .paire{
-    color:var(--blue-color);
-    background: var(--white-color);
+    color:var(--background-color);
+    background: var(--front-color);
 }
 /*            NAVBAR                  */
 .navbar{
-    display: fixed;
+    display: block;
     z-index: 1;
     overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 74px;
     /* height: 4rem; */
     line-height: 1.2;
     /* padding:10px 30px; */
@@ -104,13 +110,14 @@ body{
     align-items: center;
     justify-content: center;
 }
-img.nav-logo
+
+.nav-logo
 {
     display:inline-block;
     height: 60px;
     width: 60px;
-    color:white;
-    box-shadow: 3px 12px 18px -10px rgba(0,0,0,0.35);
+    /* color:white; */
+    /* box-shadow: 3px 12px 18px -10px rgba(0,0,0,0.35); */
 }
 .navbar-right{
     display: flex;
@@ -134,15 +141,19 @@ img.nav-logo
     font-size: .9735rem;
 }
 
-.nav-title :hover{
-  color:black;
-}
 
+.light-dark-button > button > svg
+{
+    width: 50px;
+    height:50px; 
+    /* background-color: var(--); */
+    
+}
 /*              LANDING PAGE                */
 
 .landing-page{
     height: 100%;
-    padding-top: var(--padding-top-page);
+    padding-top:calc( var(--padding-bottom-page) + 74px) ;
     padding-bottom: var(--padding-bottom-page);
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
@@ -165,13 +176,16 @@ img.nav-logo
     display: flex;
     align-items: center;
     justify-content: center;
+    height: var(--landing-logo-height);
+    width: var(--landing-logo-width);
+    
 }
-img.landing-logo-img
+/* img.landing-logo-img
 {
     display: inline-block;
     height: var(--landing-logo-height);
     width: var(--landing-logo-width);
-}
+}*/
 h1.landing-desc-title {
     font-size: 2.5em;
     line-height: 1.5em;
@@ -192,30 +206,30 @@ h2.landing-desc-title {
     align-items: center;
 }
 a.landing-button{
-    background: var(--blue-color);
+    background: var(--background-color);
     display: inline-block;
     width:max-content;
     text-align: center;
     padding:var(--padding-button);
     border-radius: var(--border-radius);
     position: relative;
-    border: 1px solid var(--blue-color);
+    border: 1px solid var(--background-color);
     overflow: hidden;
     box-shadow: 5px 12px 15px -3px rgba(0,0,0,0.1);
     transition: all 300ms ease-in-out;
 }
 a.about{
-    background:var(--white-color);
-    color:var(--blue-color);
+    background:var(--front-color);
+    color:var(--background-color);
 }
 a.landing-button:hover{
-    background:var(--white-color) ;
-    color:var(--blue-color);
+    background:var(--front-color) ;
+    color:var(--background-color);
 }
 a.about:hover{
     
-    background:var(--blue-color) ;
-    color:var(--white-color);
+    background:var(--background-color) ;
+    color:var(--front-color);
 }
 .landing-guid{
     display: flex;
@@ -259,7 +273,7 @@ h1.events-title
     font-weight: 900;
     font-family: var(--secondary-font-family);
     line-height: 1.3;
-    border-bottom: 1px solid var(--white-color);
+    border-bottom: 1px solid var(--front-color);
     /* text-underline-offset:.5rem; */
 }
 p.events-desc {
@@ -277,10 +291,10 @@ p.events-desc {
 }
 .event-element
 {
-    background-color: var(--white-color);
-    color:var(--blue-color);
+    background-color: var(--front-color);
+    color:var(--background-color);
     border-radius: 7px;
-    padding:10px;
+    padding:20px;
     padding-bottom:20px;
     box-shadow: 7px 19px 22px -4px rgba(0,0,0,0.1);
 }
@@ -304,7 +318,7 @@ h1.event-title
 }
 p.event-desc{
     font-family: var(--primary-font-family);
-    font-size:.97em;
+    font-size:.9em;
     font-weight: 100;
     line-height: 1.2;
 
@@ -331,7 +345,7 @@ p.event-desc{
         
     }
     
-    .navbar-right{
+    .navbar-right-elements > :first-child{
         display: none;
     }
     
@@ -340,7 +354,7 @@ p.event-desc{
 @media screen and (max-width:640px) 
 {
     :root{
-        --global-side-padding:30px;
+        --global-side-padding:20px;
         --landing-logo-height:100px;
         --landing-logo-width:200px;
         /* --events-grid:repeat(1,1fr) */
