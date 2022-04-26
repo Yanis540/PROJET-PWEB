@@ -218,13 +218,28 @@ a.about:hover{
 }
 img.floating-space 
 {
-    display: inline-block;
-    height: 350px;
-    width: 500px;
+    display: flex;
+    height: 500px;
+    width: 100%;
+    flex-shrink: 0;
 }
 .event-page
 {
     background: transparent;
+}
+@media screen and (max-width:1005px) 
+{ 
+    :root{
+        --global-side-padding:70px;
+    }
+    
+}
+@media screen and (max-width:960px) 
+{ 
+    :root{
+        --global-side-padding:60px;
+    }
+    
 }
 @media screen and (max-width:800px) 
 { 
