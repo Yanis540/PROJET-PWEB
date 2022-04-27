@@ -6,11 +6,12 @@
     border-radius: 7px;
 }
 
-.message-top{
+.message-top,.message-body{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .message-left,.message-right{
     display: flex;
@@ -62,4 +63,46 @@ h2.conversation-mc{
 .mc-logo svg {
     fill:#fff;
     height: 40px;
+}
+.message-body{
+    padding:0px 20px;
+    display: block;
+}
+.row{
+    display: grid ;
+    grid-column: 3fr;
+}
+.message-body .message-left,.message-body .message-right
+{
+    padding-bottom: 5px;
+}
+
+.message-body .message-left{
+    max-width: 60%;
+}
+p.conversation-left,p.conversation-right
+{
+    font-size: .95em;
+    color:#202c38;
+    background: #ffffff;
+    padding:10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+p.conversation-right
+{
+    color:#ffffff;
+    background: var(--chat-color);
+    padding:10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+p.special-border{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
 }
