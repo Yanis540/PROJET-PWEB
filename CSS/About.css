@@ -1,0 +1,65 @@
+/*              ABOUT US               */
+.messages
+{
+    background-color: #202c38;
+    padding:10px;
+    border-radius: 7px;
+}
+
+.message-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.message-left,.message-right{
+    display: flex;
+    flex:2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+}
+.message-right{
+    flex:1;
+    justify-content: flex-end;
+    
+
+}
+h2.conversation-mc{
+    font-size: .9em;
+    padding:10px;
+    border-radius: 10px;
+    color:#ffffff;
+}
+.mc-logo{
+    background-color: var(--chat-color);
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+.mc-logo::before,.mc-logo::after{
+    content: '';
+    position: absolute;
+    background: var(--active-discussion);
+    box-shadow: 0 0 0 2px #fdfdfd;;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    right:0px;
+    z-index: 1;
+    bottom: 0;
+    
+}
+.mc-logo::after{
+    content: '';
+    position: absolute;
+    box-shadow:none;
+
+    animation:pulse 1250ms infinite;
+}
+
+.mc-logo svg {
+    fill:#fff;
+    height: 40px;
+}
