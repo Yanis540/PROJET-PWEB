@@ -348,6 +348,13 @@ p.event-desc{
     .navbar-right-elements > :first-child{
         display: none;
     }
+    .moon-svg,.moon-svg-left
+    {
+        right:-20%;
+    }
+    .moon-svg-left{
+        left:-20%;
+    }
     
 }
  
@@ -363,14 +370,17 @@ p.event-desc{
     .landing-left{
         padding-right: 0;;
     }
-    
+    .moon-svg
+    {
+        right:-30%;
+    }
 }
 @media screen and (max-width:500px) 
 {
     :root{
         --events-grid:repeat(1,1fr)
 
-    }    
+    }   
 }
 
 span.riples{

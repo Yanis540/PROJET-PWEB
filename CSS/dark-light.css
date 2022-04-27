@@ -106,6 +106,19 @@
     transform: rotate(0.5turn);
 
 }
+.moon-svg{
+   fill:var(--front-color);
+   position: absolute;
+   top:50%;
+   right:0;
+}
+
+
+.moon-svg .cls-2
+
+{ 
+    fill: var(--background-color); 
+}
 @keyframes pulseToDark
 {
     0%{
