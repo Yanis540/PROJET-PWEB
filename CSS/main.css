@@ -166,7 +166,7 @@ body{
 /*              LANDING PAGE                */
 
 .landing-page{
-    height: 100%;
+    min-height: 100vh;
     padding-top:calc( var(--padding-bottom-page) + 74px) ;
     padding-bottom: var(--padding-bottom-page);
     display: grid;
@@ -208,10 +208,32 @@ h2.landing-desc-title {
     font-weight: bolder;
 
 }
+
+
+/*                    right          */
+.landing-right
+{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    width:100%;
+   
+}
+img.floating-space 
+{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    flex-shrink: 0;
+
+}
 .landing-button{
     display: flex;
     flex-direction: row;
     gap: 5px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -247,25 +269,6 @@ a.about:hover{
     align-items: center;
     justify-content: center;
     padding-top:30px;
-}
-
-/*                    right                           */
-.landing-right
-{
-    grid-column: 2/3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-   
-}
-img.floating-space 
-{
-    display: flex;
-    height: 500px;
-    width: 100%;
-    flex-shrink: 0;
-
 }
 /*              EVENTS PAGE               */
 /* commun */
@@ -339,7 +342,10 @@ h1.structures-title,h1.stats-title{
         /* --events-grid:repeat(1,1fr) */
 
     }
-    .landing-left{
+    .landing-page{
+        min-height: max-content;
+    }
+    .landing-left> *:not(:first-child){
         padding-right: 0;;
     }
     .moon-svg
@@ -356,6 +362,9 @@ h1.structures-title,h1.stats-title{
         --events-grid:repeat(1,1fr)
 
     }   
+    .landing-button{
+        flex-direction: column;
+    }
 }
 
 span.riples{
