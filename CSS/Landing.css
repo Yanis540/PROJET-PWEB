@@ -1,0 +1,90 @@
+
+/*                    left                           */
+.landing-left
+{
+    font-size: 0.8rem;
+    font-weight: 800;
+    max-width: 100%;
+    
+    padding-left: 0;
+    line-height: 1.1;
+}
+.landing-left>*:not(:first-child){
+    padding-right: 60px;
+    
+}
+.landing-logo
+{
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--landing-logo-height);
+    width: var(--landing-logo-width);
+    
+}
+h1.landing-desc-title {
+    font-size: 2.5em;
+    line-height: 1.5em;
+    font-weight: bolder;
+    
+}
+h2.landing-desc-title {
+    font-size: 1em;
+    margin:20px 0;
+    font-weight: bolder;
+
+}
+.landing-right
+{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    width:100%;
+   
+}
+/*                    right          */
+
+.landing-button{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+a.landing-button{
+    background: var(--background-color);
+    display: inline-block;
+    width:max-content;
+    text-align: center;
+    padding:var(--padding-button);
+    border-radius: var(--border-radius);
+    position: relative;
+    border: 1px solid var(--background-color);
+    overflow: hidden;
+    box-shadow: 5px 12px 15px -3px rgba(0,0,0,0.1);
+    transition: all 300ms ease-in-out;
+}
+a.about{
+    background:var(--front-color);
+    color:var(--background-color);
+}
+a.landing-button:hover{
+    background:var(--front-color) ;
+    color:var(--background-color);
+}
+a.about:hover{
+    
+    background:var(--background-color) ;
+    color:var(--front-color);
+}
+.landing-guid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:30px;
+}
