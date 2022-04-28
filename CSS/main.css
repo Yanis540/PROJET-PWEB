@@ -176,7 +176,6 @@ body{
 {
     font-size: 0.8rem;
     font-weight: 800;
-    /* padding: 0 30px; */
     max-width: 100%;
 
     padding-left: 0;
@@ -193,12 +192,6 @@ body{
     width: var(--landing-logo-width);
     
 }
-/* img.landing-logo-img
-{
-    display: inline-block;
-    height: var(--landing-logo-height);
-    width: var(--landing-logo-width);
-}*/
 h1.landing-desc-title {
     font-size: 2.5em;
     line-height: 1.5em;
@@ -271,13 +264,8 @@ img.floating-space
 
 }
 /*              EVENTS PAGE               */
-.event-page
-{
-    background: transparent;
-    padding-top: 40px;
-    padding-bottom: var(--padding-bottom-page);
-}
-h1.events-title,h1.structures-title,h1.about-title
+/* commun */
+h1.events-title,h1.structures-title,h1.about-title,h1.stats-title
 {
     font-size: 2rem;
     /* text-decoration: underline; */
@@ -289,111 +277,11 @@ h1.events-title,h1.structures-title,h1.about-title
     border-bottom: 1px solid var(--front-color);
     /* text-underline-offset:.5rem; */
 }
-p.events-desc ,p.structures-desc,p.about-desc{
-  margin-top:20px;
-  margin-bottom: 40px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.events{
-    display: grid;
-    grid-template-columns: var(--events-grid);
-    padding-bottom: 20px;
-    padding-top: 20px;
-    gap: 20px;
-}
-.event-element
-{
-    background-color: var(--front-color);
-    color:var(--background-color);
-    border-radius: 7px;
-    padding:20px;
-    padding-bottom:20px;
-    box-shadow: 7px 19px 22px -4px rgba(0,0,0,0.1);
-}
-.event-img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.event-img > img{
-    width: 100%;
-    height: 36vh;
-    padding-bottom:30px;
-}
-h1.event-title
-{
-    font-family: var(--primary-font-family);
-    font-size:1.1em;
-    font-weight: 900;
-    padding-bottom:10px;
-    line-height: 1.2;
-}
-p.event-desc{
-    font-family: var(--primary-font-family);
-    font-size:.9em;
-    font-weight: 100;
-    line-height: 1.2;
-
-}
 /*              STRUCTURES PAGE               */
-.structures-page{
-    padding-top: 40px;
-    padding-bottom: var(--padding-bottom-page);
-    
-}
-h1.structures-title{
+/* commun */
+h1.structures-title,h1.stats-title{
     color:var(--background-color);
     border-bottom: 1px solid var(--background-color);
-}
-.structures{
-    display: grid;
-    grid-template-columns: var(--structures-grid);
-    padding: 20px;
-    line-height: 1.2;
-}
-.left-structure
-{
-    grid-column: 1/2;
-    padding: 10px;
-    padding-right:0;
-    border-right: var(--border-size) solid var(--background-color);
-}
-.right-structure
-{
-    grid-column: 2/3;
-    padding: 20px;
-    padding-left: 0;
-    padding-top: 60px;
-    border-left: var(--border-size) solid var(--background-color);
-
-}
-h2.structure-name{
-    padding: 20px 0;
-}
-.structure{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
-}
-.sidebars{
-    border-left: 4px solid var(--background-color);
-    height:5em;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.sidebars.right{
-    border-left: none;
-    border-right: 4px solid var(--background-color);
-}
-.internal{
-    width: calc( 100% + 10px );
-    background: var(--background-color);
-    height: 4px;
 }
 @media screen and (max-width:1005px) 
 { 

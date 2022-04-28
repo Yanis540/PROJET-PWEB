@@ -1,7 +1,7 @@
 const nav = document.querySelector('nav');
 const landingpage=document.getElementById('landing-page')
 const options={
- rootMargin:window.screen.width > 800 ?'0%':'0%',
+ rootMargin:'-50px',
  threshold: [0]
 }
 
