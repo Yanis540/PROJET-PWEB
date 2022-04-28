@@ -5,12 +5,7 @@
     padding-bottom: var(--padding-bottom-page);
 }
 
-p.events-desc ,p.structures-desc,p.about-desc,p.stats-desc{
-  margin-top:20px;
-  margin-bottom: 40px;
-  font-size: 1rem;
-  font-weight: 600;
-}
+
 .events{
     display: grid;
     grid-template-columns: var(--events-grid);

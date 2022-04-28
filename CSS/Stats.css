@@ -1,0 +1,22 @@
+.stats-page 
+{
+    padding-top: 40px;
+    padding-bottom: var(--padding-bottom-page);
+}
+.stats
+{
+    display: grid;
+    grid-template-columns: var(--stats-grid);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 20px;
+}
+.stat-element
+{
+    background-color: var(--background-color);
+    color:var( --front-color);
+    border-radius: 7px;
+    padding:20px;
+    padding-bottom:20px;
+    box-shadow: 7px 19px 22px -4px rgba(0,0,0,0.1);
+}
