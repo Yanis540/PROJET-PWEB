@@ -9,6 +9,7 @@
     --front-color: #202c38;
     transition: all 400ms ease;
 }
+
 #theme-toggle{
     cursor: pointer;
     background: 0;
