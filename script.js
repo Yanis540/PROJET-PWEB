@@ -2,6 +2,16 @@ import Toast from './Toast/Toast.js'
 
 let navLogo=document.getElementById('nav-logo-name');
 let contactButton=document.getElementById('contact-button');
+let message=document.getElementById('message')
+let messageLabel=document.getElementById('message-label');
+
+message.addEventListener('focusin',(e)=>{
+    messageLabel.classList.add('enter');
+})
+message.addEventListener('focusout',(e)=>{
+    if(message.value.length==0)messageLabel.classList.remove('enter');
+})
+
 contactButton.addEventListener('click',(e)=>{
    e.preventDefault();
    let contactMail=document.getElementById('email').value;
