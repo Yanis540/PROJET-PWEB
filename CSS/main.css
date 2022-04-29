@@ -20,7 +20,9 @@
     --chat-color:rgb(0, 174, 224);
     --active-discussion:#44b700;
     --stats-grid:repeat(3,1fr);
-    --contact-grid:repeat(3,1fr)
+    --contact-grid:repeat(3,1fr);
+    --conversation-width:300px;
+    --conversation-height:250px;
 }
 
 *{
@@ -212,7 +214,7 @@ h2.end-website
 }
 .end-website{
     text-align: center;
-
+    padding-top: 20px;
 }
 @media screen and (max-width:1005px) 
 { 
@@ -238,7 +240,8 @@ h2.end-website
     }
     
     .navbar-right-elements > :first-child{
-        display: none;
+        /* display: none; */
+        text-align: center;
     }
     .moon-svg,.moon-svg-left
     {
@@ -279,7 +282,19 @@ h2.end-website
 @media screen and (max-width:500px) 
 {
     :root{
-        --events-grid:repeat(1,1fr)
+        --events-grid:repeat(1,1fr);
+        --landing-logo-width:150px;
+
+    }   
+    .landing-button{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:420px) 
+{
+    :root{
+        --conversation-width:180px;
+        --conversation-height:300px;
 
     }   
     .landing-button{
