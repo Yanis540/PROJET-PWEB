@@ -30,10 +30,12 @@
 
 }
 .message-right{
-    flex:1;
+    flex:.5;
     justify-content: flex-end;
-    
 
+}
+.message-right > *{
+    max-width:60%;
 }
 h2.conversation-mc{
     font-size: .9em;
@@ -113,4 +115,15 @@ p.special-border{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 0;
+}
+img.conversation-img{
+  display: inline-block;
+  width: 300px;
+  height:300px;  
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.41);
+  transition: transform 100ms ease-in-out;
+}
+img.conversation-img:hover{
+    transform: scale(1.02);
 }
