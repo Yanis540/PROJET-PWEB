@@ -32,7 +32,7 @@
     transition: background 100ms ease-in-out,
     color 100ms ease-in-out;
 }
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: .5em;
     background-color: var(--background-color);
     

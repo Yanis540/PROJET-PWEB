@@ -85,7 +85,9 @@ form > p{
     transition: top 150ms ease-in, left 150ms ease-in, font-size 150ms ease-in;
     background-color: var(--background-color);
 }
-
+textarea::-webkit-scrollbar{
+    display:none;
+}
 
 #message-label.enter,
 .form-input:focus ~ .form-label,

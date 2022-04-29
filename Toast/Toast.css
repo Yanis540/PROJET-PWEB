@@ -30,13 +30,13 @@
     padding:.75rem;
     /* border: 1px solid #04294fa8; */
     border-radius: .25rem ;
-    color:grey;
+    color:var(--front-color);
     font-weight: 900;
     font-size: .8rem;
     font-family: 'Exo 2',sans-serif;
     position: relative;
     visibility: visible;
-    background: white;
+    background: var( --background-color);
     box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%), 0 2px 15px 0 rgb(0 0 0 / 5%);
     text-transform: capitalize;
     cursor: pointer;
