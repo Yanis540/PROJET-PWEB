@@ -10,9 +10,7 @@ themeToggle.addEventListener('click',()=>{
 function enableDarkmode()
 {
     document.body.classList.remove('light-theme');
-    console.log('removed light');
     document.body.classList.add('dark-theme');
-    console.log('added dark');
 }
 function enableLightmode()
 {
