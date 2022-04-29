@@ -40,7 +40,7 @@
 }
 
 
-#theme-toggle svg, .nav-logo svg{
+#theme-toggle svg, .nav-logo svg,.contact-logo svg{
     fill: var(--front-color);
 }
 .landing-logo svg{

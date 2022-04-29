@@ -20,6 +20,7 @@
     --chat-color:rgb(0, 174, 224);
     --active-discussion:#44b700;
     --stats-grid:repeat(3,1fr);
+    --contact-grid:repeat(3,1fr)
 }
 
 *{
@@ -202,6 +203,17 @@ h1.structures-title,h1.stats-title{
     color:var(--background-color);
     border-bottom: 1px solid var(--background-color);
 }
+/*              Contact PAGE               */
+
+h2.end-website
+{
+    font-size: .9rem;
+    padding-bottom: 15px  ;
+}
+.end-website{
+    text-align: center;
+
+}
 @media screen and (max-width:1005px) 
 { 
     :root{
@@ -213,6 +225,7 @@ h1.structures-title,h1.stats-title{
 { 
     :root{
         --global-side-padding:60px;
+        --contact-grid:repeat(1,1fr)
     }
     
 }
@@ -246,6 +259,7 @@ h1.structures-title,h1.stats-title{
         --structures-grid:repeat(1, 1fr);
         --border-size:6px;
         /* --events-grid:repeat(1,1fr) */
+        --stats-grid:repeat(1,1fr);
 
     }
     .landing-page{
