@@ -1,0 +1,120 @@
+.modal {
+    position: fixed;
+    top:57%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    display: block;
+    border: 1px solid var(--front-color);
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--background-color);
+    color:var(--front-color);
+    width:80%;
+    padding:10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+}
+  
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+.close-button{
+    color:var(--front-color)
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--front-color);
+}
+  
+.modal-header .modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center ;
+}
+  
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+  
+.modal-body {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+  
+#modal-overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    
+}
+  
+#modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 2;
+    width: 100%;
+}
+.modal-animations{
+    flex: 1;
+}
+.moon-form svg{
+
+  z-index: -2;
+}
+
+.modal-form .class-input{
+    max-width: 100%;
+}
+.modal-form .form-label{
+    font-size: .85rem;
+}
+.modal-form .form-input{
+    font-size: .85rem;
+}
+select.form-input
+{
+    padding:0;
+    padding-left:1.25rem;
+}
+.separate{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+h1.form-title
+{
+    font-family: var(--secondary-font-family);
+    padding-bottom: 30px;    
+}

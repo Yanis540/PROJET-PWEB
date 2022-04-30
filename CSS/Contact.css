@@ -93,7 +93,7 @@ textarea::-webkit-scrollbar{
 .form-input:focus ~ .form-label,
 .form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
   top: -0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   left: 0.8rem;
 }
 .message-textarea{

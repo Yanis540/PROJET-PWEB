@@ -2,19 +2,22 @@ import Toast from './Toast/Toast.js'
 
 let navLogo=document.getElementById('nav-logo-name');
 let contactButton=document.getElementById('contact-button');
-let message=document.getElementById('message')
-let messageLabel=document.getElementById('message-label');
+let registreButton=document.getElementById('register-button');
 
-message.addEventListener('focusin',(e)=>{
-    messageLabel.classList.add('enter');
+let contactMessage=document.getElementById('contact-message');
+
+let contactMessageLabel=document.getElementById('contact-message-label');
+
+contactMessage.addEventListener('focusin',(e)=>{
+    contactMessageLabel.classList.add('enter');
 })
-message.addEventListener('focusout',(e)=>{
-    if(message.value.length==0)messageLabel.classList.remove('enter');
+contactMessage.addEventListener('focusout',(e)=>{
+    if(contactMessage.value.length==0)contactMessageLabel.classList.remove('enter');
 })
 
 contactButton.addEventListener('click',(e)=>{
    e.preventDefault();
-   let contactMail=document.getElementById('email').value;
+   let contactMail=document.getElementById('contact-email').value;
    let message=document.getElementById('message').value;
    if(contactMail.length==0 || message.length==0)
    {
@@ -29,15 +32,9 @@ contactButton.addEventListener('click',(e)=>{
    }
 })
 navLogo.addEventListener('click',(e)=>{
-
-    // const toast=new Toast({
-    //     position:screen.width>600 ? 'top-right':'top-center',
-    //     text:'✨ 🦋 Welcome 🦋 ✨',
-    //     pauseOnHover:true
-    // })
     createRiples(navLogo,e)
-    
 })
+
 const createRiples=(element,e)=>{
     let x=e.clientX - e.target.offsetLeft;
     let y=e.clientY - e.target.offsetTop;
@@ -51,4 +48,40 @@ const createRiples=(element,e)=>{
     },1000)
 }
 
+/*Modal part */
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const modalOverlay = document.getElementById('modal-overlay')
 
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+modalOverlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+const openModal=(modal) =>{
+  if (modal == null) return
+  modal.classList.add('active')
+  modalOverlay.classList.add('active')
+}
+
+const closeModal=(modal)=> {
+  if (modal == null) return
+  modal.classList.remove('active')
+  modalOverlay.classList.remove('active')
+}

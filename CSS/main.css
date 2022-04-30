@@ -35,11 +35,42 @@
 ::-webkit-scrollbar {
     width: .5em;
     background-color: var(--background-color);
-    
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb,html::-webkit-scrollbar {
     background-color: var(--front-color);
+    border-radius: 3px !important;
 } 
+/* .modal::-webkit-scrollbar{
+    display: none;
+} */
+@-moz-document url-prefix() {
+    .scrollbar {
+        overflow: auto;
+        width: 0.5em !important;
+        scroll-behavior: smooth !important;
+        background-color: darkgrey !important;
+        outline: 1px solid slategrey !important;
+        border-radius: 4px !important;
+        border: 1px solid var(--background-color);
+    }
+}
+
+*::-webkit-scrollbar-corner{
+    border-radius: 50%;
+}
+/*         remove the number arrows          */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 a{
     text-decoration: none;
     font-size: 1rem;
@@ -230,6 +261,9 @@ h2.end-website
     .left-structure,.right-structure{
         grid-column: 1/2;
     }
+    .modal-animations{
+       display: none;
+      }
 }
 @media screen and (max-width:500px) 
 {
