@@ -95,55 +95,6 @@ body{
     background: var(--background-color);
 }
 
-.navbar-content{
-    display: flex ;
-    height: 100%;
-    align-items: center;
-    padding:07px 0;
-    justify-items: center;
-}
-.navbar-left{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    gap:10px;
-    overflow: hidden;
-    border-radius: 7px;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-logo
-{
-    display:inline-block;
-    height: 100%;
-    width: 60px;
-    /* color:white; */
-    /* box-shadow: 3px 12px 18px -10px rgba(0,0,0,0.35); */
-}
-.navbar-right{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    flex:1;
-}
-.navbar-right-elements{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-evenly;
-    gap:20px;
-}
-.navbar-right-elements a{
-    font-size: .7rem;
-}
-.navbar-left  a
-{
-    font-size: .9735rem;
-}
-
-
 .light-dark-button > button > svg
 {
     width: 30px;
@@ -216,6 +167,7 @@ h2.end-website
     text-align: center;
     padding-top: 20px;
 }
+ 
 @media screen and (max-width:1005px) 
 { 
     :root{
@@ -310,6 +262,7 @@ span.riples{
     border-radius: 50%;
     animation:riples 1s linear infinite;
 }
+/*           animations                 */
 @keyframes riples {
     0%{
         width: 0;
