@@ -64,14 +64,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: #202c38;
+    filter: blur(1px);
     pointer-events: none;
     
 }
   
 #modal-overlay.active {
-    opacity: 1;
+    opacity: .4;
     pointer-events: all;
+    z-index: 3;
+    filter: blur(3px);
 }
 .modal-form{
     display: flex;
@@ -79,6 +82,7 @@
     justify-content: flex-start;
     flex: 2;
     width: 100%;
+    z-index: 4;
 }
 .modal-animations{
     flex: 1;

@@ -120,8 +120,7 @@ registreButton.addEventListener('click',(e)=>{
      lastName.length==0||
      registerMessage.length==0||
      !matricule|| 
-     !registerPhone||
-     matricule <1990000000000)
+     !registerPhone)
   {
     const toast=new Toast({
       position:screen.width>600 ? 'top-right':'top-center',
