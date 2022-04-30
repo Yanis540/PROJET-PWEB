@@ -2,7 +2,6 @@ import Toast from './Toast/Toast.js'
 
 let navLogo=document.getElementById('nav-logo-name');
 let contactButton=document.getElementById('contact-button');
-let registreButton=document.getElementById('register-button');
 
 let contactMessage=document.getElementById('contact-message');
 
@@ -17,8 +16,8 @@ contactMessage.addEventListener('focusout',(e)=>{
 
 contactButton.addEventListener('click',(e)=>{
    e.preventDefault();
-   let contactMail=document.getElementById('contact-email').value;
-   let message=document.getElementById('message').value;
+   let contactMail=document.getElementById('contact-email')?.value;
+   let message=document.getElementById('message')?.value;
    if(contactMail.length==0 || message.length==0)
    {
        const toast=new Toast({
@@ -85,3 +84,82 @@ const closeModal=(modal)=> {
   modal.classList.remove('active')
   modalOverlay.classList.remove('active')
 }
+
+
+/* Handle login  */
+let registreButton=document.getElementById('register-button');
+
+
+registreButton.addEventListener('click',(e)=>{
+  e.preventDefault();
+  let matriculeInput=document.getElementById('matricule')
+  let matricule=matriculeInput?.value
+
+  let firstNameInput=document.getElementById('first-name')
+  let firstName=firstNameInput?.value
+
+  let lastNameInput=document.getElementById('last-name')
+  let lastName=lastNameInput?.value
+
+  let registerEmailInput=document.getElementById('register-email')
+  let registerEmail=registerEmailInput?.value
+
+  let registerPhoneInput=document.getElementById('register-phone')
+  let registerPhone=registerPhoneInput?.value
+  
+  let year  =document.getElementById('register-year');
+  let registerYear=year.options[year.selectedIndex]?.value;
+
+  let fac  =document.getElementById('register-faculty');
+  let registerFaculty=fac.options[fac.selectedIndex]?.value;
+
+  let registerMessageInput=document.getElementById('register-message')
+  let registerMessage=registerMessageInput?.value
+
+  if(firstName.length==0||
+     lastName.length==0||
+     registerMessage.length==0||
+     !matricule|| 
+     !registerPhone||
+     matricule <1990000000000)
+  {
+    const toast=new Toast({
+      position:screen.width>600 ? 'top-right':'top-center',
+      text:'Add All fields 🙈',
+      pauseOnHover:true
+     })
+  }
+  else
+  {
+    if(registerMessage.length <40)
+    {
+      const toast=new Toast({
+        position:screen.width>600 ? 'top-right':'top-center',
+        text:'you are not too motivated 😔',
+        pauseOnHover:true
+       })
+    }
+    else
+    {
+      const toast=new Toast({
+        position:screen.width>600 ? 'top-right':'top-center',
+        text:'We added You 😀😁',
+        pauseOnHover:true
+       })
+       console.log(matricule);
+       firstNameInput.value=''
+       lastNameInput.value=''
+       matriculeInput.value=''
+       console.log
+       registerEmailInput.value=''
+       registerMessageInput.value=''
+       registerPhoneInput.value=''
+       closeModalButtons.forEach(button => {
+          const modal = button.closest('.modal')
+          closeModal(modal)
+      })
+    }
+   }
+  
+
+})
