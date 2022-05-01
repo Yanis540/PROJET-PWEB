@@ -49,8 +49,8 @@
         overflow: auto;
         width: 0.5em !important;
         scroll-behavior: smooth !important;
-        background-color: darkgrey !important;
-        outline: 1px solid slategrey !important;
+        background-color: var(--background-color) !important;
+        outline: 1px solid var(--front-color) !important;
         border-radius: 4px !important;
         border: 1px solid var(--background-color);
     }
@@ -83,7 +83,7 @@ html {
     font-weight: 500;
     line-height: 1;
     scroll-behavior: smooth;
--webkit-font-smoothing: antialiased;
+/* -webkit-font-smoothing: antialiased; */
 
 }
 body{

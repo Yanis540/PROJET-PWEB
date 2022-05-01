@@ -20,24 +20,6 @@
     position: relative;
     isolation: isolate;
 }
-#theme-toggle:after{
-    content: '';
-    position: absolute;
-    bottom:0 ;
-    right: 0;
-    left: 0;
-    color: var(--background-color);
-    background:var(--front-color) ;
-    width: max-content;
-    font-size: 1.5rem;
-    margin:0 auto    ;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    opacity: 0.7;
-    transform: scale(0);
-    transition: opacity 100ms ease;
-    transform-origin: top;
-}
 
 
 #theme-toggle svg, .nav-logo svg,.contact-logo svg{
