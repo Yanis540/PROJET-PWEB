@@ -1,3 +1,4 @@
+
 <div class="modal" id="modal">
     <div class="modal-header">
         <div class="modal-title">Register</div>
@@ -6,7 +7,7 @@
     <div class="modal-body">
         <div class="modal-form">
             <h1 class="form-title">Form:</h1>
-            <form action="" method="POST" class="separate">
+            <form id='register-form'action="index.php" method="POST" class="separate">
                 <div class="class-input">
                     <input type="number" id="matricule"name="matricule" class="form-input" autocomplete="off" placeholder=" ">
                     <label for="matricule" class="form-label">Matricule:</label>
@@ -57,7 +58,7 @@
                     <label for="message" id="register-message-label" class="form-label">Message:</label>
                 </div>
                 
-                <button type="" id="register-button" class="submit-button">SEND IT </button>
+                <button name='submit-register' type="submit" id="register-button" class="submit-button">SEND IT </button>
             </form>
         </div>
         <div class="modal-animations">

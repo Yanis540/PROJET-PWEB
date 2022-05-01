@@ -1,6 +1,8 @@
 <?php 
- 
-
+   if(isset($_POST['submit-register']))
+   {
+       echo 'submitedd ';
+   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +23,7 @@
     <link rel="stylesheet" href="./CSS/Navbar.css">
     <link rel="stylesheet" href="./CSS/Modal.css">
     <link rel="stylesheet" href="./CSS/main.css">
-    <script src="./script.js"defer type="module" ></script>
+    <script src="./script.js?t=12345"defer type="module" ></script>
     <script src="./dark-light.js"defer ></script>
     <script src="./intersection-observer.js"defer ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />

@@ -63,7 +63,7 @@
         </div>
         <div class="navbar-right">
             <div class="navbar-right-elements">
-                <span><a class="nav-title contact" href="/#contact">CONTACT US</a> </span>
+                <span><a id='scroll-contact'class="nav-title contact" href="#contact">CONTACT US</a> </span>
                 <span><a data-modal-target="#modal" id="modal-button" class="nav-title">JOIN US</a></span>
             </div>
         </div>

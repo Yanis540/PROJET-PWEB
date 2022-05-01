@@ -58,7 +58,7 @@
         <div class="contact-element contact-form">
             <h1 class="contact-title">Your Feedbacks</h1>
             <div class="form">
-                <form action="" method="POST">
+                <form id='contact-form' action="index.php" method="GET">
                     <div class="class-input">
                         <input type="email" id="contact-email"name="contact-email" class="form-input" autocomplete="off" placeholder=" ">
                         <label for="contact-email" class="form-label">Email:</label>
@@ -68,7 +68,7 @@
                         <textarea type="text" id="contact-message"name="contact-message" class="form-input message-textarea" autocomplete="off" placeholder=" "></textarea>
                         <label for="contact-message" id="contact-message-label" class="form-label">Message:</label>
                     </div>
-                    <button type="" id="contact-button" class="submit-button">SEND IT </button>
+                    <button name='submit-contact'type="submit" id="contact-button" class="submit-button">SEND IT </button>
                 </form>
                 </div>
         </div>
