@@ -1,4 +1,55 @@
+<?php 
+    include ('./db_connect.php');
+    // handle registration 
+    if(isset($_POST['submit-register']))
+    {
+        $matricule=intval(mysqli_real_escape_string($connection,$_POST['matricule']));
+        $first_name=mysqli_real_escape_string($connection,$_POST['first-name']);
+        // $first_name=mysqli_real_escape_string($connection,$_POST['first-name']);
+        $last_name=mysqli_real_escape_string($connection,$_POST['last-name']);
+        $email=mysqli_real_escape_string($connection,$_POST['register-email']);
+        $phone=intval(mysqli_real_escape_string($connection,$_POST['register-phone']));
+        $year=mysqli_real_escape_string($connection,$_POST['register-year']);
+        $faculty=mysqli_real_escape_string($connection,$_POST['register-faculty']);
+        $message=mysqli_real_escape_string($connection,$_POST['register-message']);
+        // echo $matricule,$first_name,$last_name,$email,$phone,$year,$faculty,$message;
+        try{
+            $sql="insert into 
+            recruit (matricule,first_name,last_name,email,phone,year,faculty,message)
+            values($matricule,'$first_name','$last_name','$email',$phone,'$year','$faculty','$message');
+            ";
+            $results=mysqli_query($connection,$sql);    
+            echo "
+                <script>
+                 document.body.classList.add('added');
+                </script>
+           ";
+        }
+        catch(mysqli_sql_exception $e)
+        {
+            
+            if($e->getCode() == 1062)
+            {
+                echo "
+                    <script>
+                      document.body.classList.add('duplicate');
+                    </script>
+               ";
+            }
+            else{
+                echo "
+                    <script>
+                      document.body.classList.add('other');
+                    </script>
+              ";
 
+            }
+        }
+        unset($_POST['submit-register']);
+        
+    }
+    
+?>
 <div class="modal" id="modal">
     <div class="modal-header">
         <div class="modal-title">Register</div>

@@ -145,18 +145,36 @@ registerForm.addEventListener('submit',(e)=>{
       })
       return 
     }
-    else
-    {
-      const toast=new Toast({
-        position:screen.width>600 ? 'top-right':'top-center',
-        text:'We added You 😀😁',
-        pauseOnHover:true
-      })
-      closeModalButtons.forEach(button => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
-      })
-    }
   }
   
 })
+
+let body=document.body;
+if(body.classList.contains('added'))
+{
+  const toast=new Toast({
+    position:screen.width>600 ? 'top-right':'top-center',
+    text:'We added You 😀😁',
+    pauseOnHover:true
+  })
+  body.classList.remove('added');
+}
+
+if(body.classList.contains('duplicate'))
+{
+  const toast=new Toast({
+    position:screen.width>600 ? 'top-right':'top-center',
+    text:'You are already amoung us 😀😁',
+    pauseOnHover:true
+  })
+  body.classList.remove('duplicate');
+}
+if(body.classList.contains('other'))
+{
+  const toast=new Toast({
+    position:screen.width>600 ? 'top-right':'top-center',
+    text:'There was a problem , could not add you 😔',
+    pauseOnHover:true
+  })
+  body.classList.remove('other');
+}
