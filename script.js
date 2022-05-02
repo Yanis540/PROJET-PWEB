@@ -164,7 +164,7 @@ if(body.classList.contains('duplicate'))
 {
   const toast=new Toast({
     position:screen.width>600 ? 'top-right':'top-center',
-    text:'You are already amoung us 😀😁',
+    text:'You are already amoung us 😀😁 , or your email has already been used',
     pauseOnHover:true
   })
   body.classList.remove('duplicate');
