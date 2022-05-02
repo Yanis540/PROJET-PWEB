@@ -1,13 +1,33 @@
 <?php 
+   
+   $connection=mysqli_connect('localhost','root','Yanis123','db_pweb');
+   if(!$connection)
+   {
+       echo 'connection error' . mysqli_connect_error();
+   }
+   // get events 
+   $sql='select * from event order by date_event desc';
+   // make query and get results 
+   $result= mysqli_query($connection,$sql);
+
+   // fetch the resulting rows as an associative array 
+   $events=mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+   mysqli_free_result($result);
+   mysqli_close($connection);
+   // pass it as a global variable to reach the events page
+   session_start();
+   $_SESSION['events'] =$events;
+
    if(isset($_POST['submit-register']))
    {
-        echo $_POST['matricule'];
-        echo $_POST['first-name'];
-        echo $_POST['last-name'];
-        echo $_POST['register-email'];
-        echo $_POST['register-phone'];
-        echo $_POST['register-year'];
-        echo $_POST['register-faculty'];
+        // echo $_POST['matricule'];
+        // echo $_POST['first-name'];
+        // echo $_POST['last-name'];
+        // echo $_POST['register-email'];
+        // echo $_POST['register-phone'];
+        // echo $_POST['register-year'];
+        // echo $_POST['register-faculty'];
    }
 ?>
 <!DOCTYPE html>

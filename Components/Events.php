@@ -1,45 +1,29 @@
+<?php 
+   $events=$_SESSION['events'] ;
+?>
 <div id="events"class="event-page impaire ">
     <h1 class="events-title">Our Events</h1>
     <p class="events-desc">Discover the events we hold all year round</p>
     <div class="events">
-        <div class="event-element">
+     <?php foreach($events as $event){ ?>
+        <div class="event-element" style="position: relative;">
+            <?php 
+                $event_name=htmlspecialchars($event['event_name']); 
+                $event_link_img="./SVG/". $event_name .".svg";
+                $event_description=htmlspecialchars($event['description']);
+                $event_date=htmlspecialchars($event['date_event']);
+            ?>
             <div class="event-img">
-                <img src="./SVG/AGC.svg" alt="">
+              
+              <img src="<?php echo $event_link_img?>" alt="">
             </div>
             <div class="event-text">
-                <h1 class="event-title">Algerian Game Challenge</h1>
-                <p class="event-desc">A nation-wide game development contest held annually.</p>
-            </div>
+             <h1 class="event-title"><?php echo $event_name ?></h1>
+             <p class="event-desc"><?php echo $event_description ?></p>
+             <span class="event-desc" style="position:absolute;bottom:10px; right:20px;font-size:10px;"><?php echo $event_date ?></span>
+           </div>
         </div>
-        <div class="event-element">
-            <div class="event-img">
-                <img src="./SVG/mctf.svg" alt="">
-            </div>
-            <div class="event-text">
-                <h1 class="event-title">Micro Catch The Flag</h1>
-                <p class="event-desc">A conference about cybersecurity alongside a national CTF competition organised by Micro Club.</p>
-            </div>
-            
-        </div>
-        <div class="event-element">
-            <div class="event-img">
-                <img src="./SVG/HACKTOBER.svg" alt="">
-            </div>
-            <div class="event-text">
-                <h1 class="event-title">MC Hacktober FEST</h1>
-            <p class="event-desc">A month long celebration of open source presented by digital ocean, sponsored by Github and hosted by Micro Club.</p>
-            </div>
-            
-        </div>
-        <div class="event-element">
-            <div class="event-img">
-                <img src="./SVG/REDHAT.svg" alt="">
-            </div>
-            <div class="event-text">
-                <h1 class="event-title">MC RedHat Training Camp</h1>
-                <p class="event-desc">Two days bootcamp about visiualization and cloud-computing presented by Dr Djelloul BOUIDA.</p>
-            </div>
-            
-        </div>
+     <?php } ?>
+        
     </div>
 </div>
