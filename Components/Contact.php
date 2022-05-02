@@ -58,7 +58,7 @@
         <div class="contact-element contact-form">
             <h1 class="contact-title">Your Feedbacks</h1>
             <div class="form">
-                <form id='contact-form' action="index.php" method="GET">
+                <form id='contact-form' action="" method="GET">
                     <div class="class-input">
                         <input type="email" id="contact-email"name="contact-email" class="form-input" autocomplete="off" placeholder=" ">
                         <label for="contact-email" class="form-label">Email:</label>

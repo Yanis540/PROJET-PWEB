@@ -70,12 +70,13 @@ const closeModal=(modal)=> {
 
 let contactForm=document.getElementById('contact-form');
 contactForm.addEventListener('submit',(e)=>{
-  e.preventDefault();
   let contactMail=document.getElementById('contact-email')?.value;
   let message=document.getElementById('contact-message')?.value;
 
   if(contactMail.length==0 ||!message|| message?.length==0)
   {
+  e.preventDefault();
+
     const toast=new Toast({
       position:screen.width>600 ? 'top-right':'top-center',
       text:'Add email and msg',
@@ -98,7 +99,6 @@ contactForm.addEventListener('submit',(e)=>{
 let registerForm=document.getElementById('register-form');
 
 registerForm.addEventListener('submit',(e)=>{
-  e.preventDefault();
   let matriculeInput=document.getElementById('matricule')
   let matricule=matriculeInput?.value
 
@@ -125,21 +125,25 @@ registerForm.addEventListener('submit',(e)=>{
 
   if(firstName.length==0||lastName.length==0||registerMessage.length==0||!matricule|| !registerPhone)
   {
+    e.preventDefault();
     const toast=new Toast({
       position:screen.width>600 ? 'top-right':'top-center',
       text:'Add All fields 🙈',
       pauseOnHover:true
     })
+    return 
   }
   else
   {
     if(registerMessage.length <40)
     {
+      e.preventDefault()
       const toast=new Toast({
         position:screen.width>600 ? 'top-right':'top-center',
         text:'you are not too motivated 😔',
         pauseOnHover:true
-       })
+      })
+      return 
     }
     else
     {
@@ -148,17 +152,10 @@ registerForm.addEventListener('submit',(e)=>{
         text:'We added You 😀😁',
         pauseOnHover:true
       })
-      firstNameInput.value=''
-      lastNameInput.value=''
-      matriculeInput.value=''
-      registerEmailInput.value=''
-      registerMessageInput.value=''
-      registerPhoneInput.value=''
       closeModalButtons.forEach(button => {
         const modal = button.closest('.modal')
         closeModal(modal)
       })
-      registerForm.submit();
     }
   }
   
