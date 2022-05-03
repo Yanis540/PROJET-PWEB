@@ -74,7 +74,7 @@ form > p{
 
 
 
-.form-label,#message-label {
+.form-label,#contact-message-label,#register-message-label {
     position: absolute;
     left: .8rem;
     top: 0.8rem;
@@ -89,8 +89,9 @@ textarea::-webkit-scrollbar{
     display:none;
 }
 
-#message-label.enter,
-.form-input:focus ~ .form-label,
+#contact-message-label.enter,
+#register-message-label.enter,
+/* .form-input:focus ~ .form-label, */
 .form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
   top: -0.5rem;
   font-size: 0.65rem;

@@ -106,7 +106,7 @@
                 <p>Show us your motivations to join us </p>
                 <div class="class-input">
                     <textarea type="text" id="register-message"name="register-message" class="form-input message-textarea" autocomplete="off" placeholder=" "></textarea>
-                    <label for="message" id="register-message-label" class="form-label">Message:</label>
+                    <label for="register-message" id="register-message-label" class="form-label">Message:</label>
                 </div>
                 
                 <button name='submit-register' type="submit" id="register-button" class="submit-button">SEND IT </button>

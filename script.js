@@ -11,6 +11,7 @@ contactMessage.addEventListener('focusout',(e)=>{
   if(contactMessage.value.length==0)contactMessageLabel.classList.remove('enter');
 })
 
+
 navLogo.addEventListener('click',(e)=>{
   createRiples(navLogo,e)
 })
