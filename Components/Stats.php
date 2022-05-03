@@ -2,6 +2,7 @@
   include ('./db_connect.php');
   $faculty_stats=$_SESSION['faculty_stats'] ;
   $recruit_stats=$_SESSION['recruit_stats'] ;
+  $members_stats=$_SESSION['members_stats'] ;
   ;
 ?>
 <div id="stats"class="stats-page  paire">
@@ -9,7 +10,7 @@
     <p class="stats-desc">Get Our Latest Stats </p>
     <div class="stats">
         <div class="stat-element">
-            <p>+500 members in the club</p>
+            <p>+ <?php echo $members_stats[0]['number_total']?> members in the club</p>
         </div>
         <div class="stat-element">
             <?php foreach($faculty_stats as $fac ) {?>

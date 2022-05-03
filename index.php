@@ -11,11 +11,13 @@
 
     $sql ='select  faculty, count(faculty) as number_faculty from recruit group by faculty;';
     $faculty_stats=handleGet($connection,$sql);
-    //get members number 
-
+    //get number of people joined this year
     $current_year=intval(date('Y'));
     $sql ="select   count(matricule) as number_joined from recruit where date_reg like '$current_year%' ;";
     $recruit_stats=handleGet($connection,$sql);
+    //get number of people joined this year
+    $sql ="select   count(matricule) as number_total from recruit ;";
+    $members_stats=handleGet($connection,$sql);
     
 
 
@@ -24,6 +26,7 @@
     $_SESSION['events'] =$events;
     $_SESSION['faculty_stats'] =$faculty_stats;
     $_SESSION['recruit_stats'] =$recruit_stats;
+    $_SESSION['members_stats'] =$members_stats;
     mysqli_close($connection);
    }
    else{
@@ -79,7 +82,6 @@
         <?php include('./Components/Structures.php') ?>
         <!--Events page-->
         <?php include('./Components/Events.php') ?>
-        
         <!--Stats page -->
         <?php include('./Components/Stats.php') ?>
         <!--Contact page -->
