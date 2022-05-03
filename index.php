@@ -2,23 +2,41 @@
    
   include ('./db_connect.php');
    // get events 
-   $sql='select * from event order by date_event desc';
    // make query and get results 
    if($connection)
    {
-    $result= mysqli_query($connection,$sql);
+     $sql='select * from event order by date_event desc';
+     $events=handleGet($connection,$sql);
+    // GET FACULTY STATS
 
-    // fetch the resulting rows as an associative array 
-    $events=mysqli_fetch_all($result,MYSQLI_ASSOC);
- 
-    mysqli_free_result($result);
-    mysqli_close($connection);
+    $sql ='select  faculty, count(faculty) as number_faculty from recruit group by faculty;';
+    $faculty_stats=handleGet($connection,$sql);
+    //get members number 
+
+    $current_year=intval(date('Y'));
+    $sql ="select   count(matricule) as number_joined from recruit where date_reg like '$current_year%' ;";
+    $recruit_stats=handleGet($connection,$sql);
+    
+
+
     // pass it as a global variable to reach the events page
     session_start();
     $_SESSION['events'] =$events;
+    $_SESSION['faculty_stats'] =$faculty_stats;
+    $_SESSION['recruit_stats'] =$recruit_stats;
+    mysqli_close($connection);
    }
    else{
        include('./Components/404.php');
+   }
+?>
+<?php
+   function handleGet($connection,$sql)
+   {
+     $result= mysqli_query($connection,$sql);
+     $array=mysqli_fetch_all($result,MYSQLI_ASSOC); // fetch the resulting rows as an associative array 
+     mysqli_free_result($result);
+     return $array;
    }
 ?>
 <!DOCTYPE html>
