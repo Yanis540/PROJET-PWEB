@@ -1,16 +1,18 @@
 import Toast from './Toast/Toast.js'
 
 let navLogo=document.getElementById('nav-logo-name');
-let contactMessage=document.getElementById('contact-message');
-let contactMessageLabel=document.getElementById('contact-message-label');
 
-contactMessage.addEventListener('focusin',(e)=>{
-  contactMessageLabel.classList.add('enter');
-})
-contactMessage.addEventListener('focusout',(e)=>{
-  if(contactMessage.value.length==0)contactMessageLabel.classList.remove('enter');
-})
 
+let inputs=Array.from(document.getElementsByClassName('form-input'));
+inputs.forEach(input=>{
+  const label=input.nextElementSibling;
+  input.addEventListener('focusin',(e)=>{
+    label.classList.add('enter');
+  })
+  input.addEventListener('focusout',(e)=>{
+    if(input?.value.length==0)label.classList.remove('enter');
+  })
+})
 
 navLogo.addEventListener('click',(e)=>{
   createRiples(navLogo,e)

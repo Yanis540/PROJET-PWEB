@@ -210,7 +210,8 @@ h2.end-website
 { 
     :root{
         --global-side-padding:60px;
-        --contact-grid:repeat(1,1fr)
+        --contact-grid:repeat(1,1fr);
+        --landing-logo-width:50%;
     }
     
 }
@@ -218,10 +219,16 @@ h2.end-website
 { 
     :root{
         --global-side-padding:50px;
-        --events-grid:repeat(2,1fr)
-        
+        --events-grid:repeat(2,1fr);
+        --landing-logo-height:100px;
+        --landing-logo-width:50%;
     }
-    
+    .landing-page{
+        min-height: max-content;
+    }
+    .landing-left> *:not(:first-child){
+        padding-right: 0;;
+    }    
     .navbar-right-elements > :first-child{
         /* display: none; */
         text-align: center;
@@ -241,19 +248,14 @@ h2.end-website
     :root{
         --global-side-padding:20px;
         --landing-logo-height:100px;
-        --landing-logo-width:200px;
+        --landing-logo-width:150px;
         --structures-grid:repeat(1, 1fr);
         --border-size:6px;
         /* --events-grid:repeat(1,1fr) */
         --stats-grid:repeat(1,1fr);
 
     }
-    .landing-page{
-        min-height: max-content;
-    }
-    .landing-left> *:not(:first-child){
-        padding-right: 0;;
-    }
+
     .moon-svg
     {
         right:-30%;
