@@ -18,11 +18,11 @@
     overflow-y: scroll;
     transform: unset;
     background-color: #202c38;
-    border:2px solid cyan;
+    border:2px solid var(--chat-color);
     height: 500px;
     z-index: 100;
     border-radius: 7px;
-    animation: popconvreturn 300ms ease-in-out alternate;
+    animation: popconvreturn 300ms ease-in-out forwards;
 
 }
 
@@ -30,6 +30,7 @@
     opacity: 1;
     transform: unset;
     animation: popconv 300ms ease-in-out alternate;
+
 }
 @keyframes popconv {
     0%{
@@ -41,12 +42,10 @@
 }
 @keyframes popconvreturn {
     0%{
-        transform:  translate(150%,150%);
-
+       transform:unset;
     }
     100%{
-        transform:  translate(0,0);
-
+        transform:  translate(150%,150%);
     }
 }
 .about-us::-webkit-scrollbar{
@@ -60,8 +59,10 @@
     margin-bottom: 30px;
 }
 .message-top{
-    display: block;
-    width: calc( var(--width-about) - 8px );
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc( var(--width-about) - 4px );
     position: fixed;
     padding:5px;
     padding-right: 0;
@@ -133,14 +134,21 @@ h2.conversation-mc{
     fill:#fff;
     height: 40px;
 }
+.close-messenger{
+    background: transparent;
+    background-color: transparent;
+    box-shadow: none;
+    color:#fff;
+    cursor: pointer;
+    justify-content: flex-end;
+    transform: scale(1.3);
+    margin-right: 3px;
+}
 .message-body{
     padding:0px 20px;
     display: block;
 }
-.row{
-    display: grid ;
-    grid-column: 3fr;
-}
+
 .message-body .message-left,.message-body .message-right
 {
     padding-bottom: 5px;

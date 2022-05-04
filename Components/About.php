@@ -45,7 +45,7 @@
             </svg>
         </div>
     </div>
-    <div id='about'class="about-us ">
+    <div id='about'class="about-us">
         <div class="about-container">
             <div class="message-top">
                 <div class="message-left">
@@ -94,7 +94,11 @@
                         </svg>
                     </div>
                     <h2 class="conversation-mc">Micro Club</h2>
+
                 </div>  
+                <div class="message-right">
+                 <a id='close-messenger'class="close-messenger">&times;</a>
+                </div>
             </div>
             
             <div class="message-body"> 
