@@ -1,20 +1,44 @@
 /*              ABOUT US               */
 .about-us{
     margin-bottom: 20px;
-}
-.messages
-{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    right:40px;
+    bottom: 0;
+    width:var(--width-about);
+    overflow-y: scroll;
     background-color: #202c38;
-    padding:10px;
+    border:2px solid cyan;
+    height: 500px;
+    z-index: 100;
     border-radius: 7px;
+}
+.about-us::-webkit-scrollbar{
+  display: none;
+}
+.about-container{
+    position: relative;
 }
 
 .message-top,.message-body{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 30px;
+}
+.message-top{
+    display: block;
+    width: calc( var(--width-about) - 8px );
+    position: fixed;
+    padding:5px;
+    padding-right: 0;
+    padding-left: 0;
+    background: #202c38;
+    border-radius:3px 3px 0px 0px;
+    z-index: 400;
+}
+
+.message-body{
+    margin-top:70px;
 }
 .message-left,.message-right{
     display: flex;
@@ -46,6 +70,7 @@ h2.conversation-mc{
 .mc-logo{
     background-color: var(--chat-color);
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     position: relative;
 }

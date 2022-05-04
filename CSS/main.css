@@ -23,6 +23,7 @@
     --contact-grid:repeat(3,1fr);
     --conversation-width:300px;
     --conversation-height:250px;
+    --width-about:17rem;
 }
 
 *{

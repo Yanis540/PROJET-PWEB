@@ -1,7 +1,5 @@
-<div id='about'class="about-us impaire">
-    <h1 class="about-title">About us</h1>
-    <p class="about-desc">Get to know Micro Club better.</p>
-    <div class="messages">
+<div id='about'class="about-us">
+    <div class="about-container">
         <div class="message-top">
             <div class="message-left">
                 <div class="mc-logo">
@@ -49,12 +47,10 @@
                     </svg>
                 </div>
                 <h2 class="conversation-mc">Micro Club</h2>
-            </div>
-            <div class="message-right">
-                
-            </div>
+            </div>  
         </div>
-        <div class="message-body">
+        
+        <div class="message-body"> 
             <div class="message-left">
                 <p class="conversation-left">Hi! Welcome to Micro Club. 😊</p>
             </div>
