@@ -1,19 +1,53 @@
 /*              ABOUT US               */
+.micro-display{
+    position: fixed;
+    right:3px;
+    bottom:3px;
+}
+
 .about-us{
     margin-bottom: 20px;
     position: fixed;
     display: flex;
     flex-direction: column;
+    opacity: 0;
     flex-wrap: wrap;
-    right:40px;
+    right:45px;
     bottom: 0;
     width:var(--width-about);
     overflow-y: scroll;
+    transform: unset;
     background-color: #202c38;
     border:2px solid cyan;
     height: 500px;
     z-index: 100;
     border-radius: 7px;
+    animation: popconvreturn 300ms ease-in-out alternate;
+
+}
+
+.about-us.show{
+    opacity: 1;
+    transform: unset;
+    animation: popconv 300ms ease-in-out alternate;
+}
+@keyframes popconv {
+    0%{
+        transform:  translate(150%,150%);
+    }
+    100%{
+        transform:unset;
+    }
+}
+@keyframes popconvreturn {
+    0%{
+        transform:  translate(150%,150%);
+
+    }
+    100%{
+        transform:  translate(0,0);
+
+    }
 }
 .about-us::-webkit-scrollbar{
   display: none;
@@ -151,4 +185,47 @@ img.conversation-img{
 }
 img.conversation-img:hover{
     transform: scale(1.02);
+}
+
+/*display*/
+.micro-display .mc-logo
+{
+    border-radius: 50%;
+    transition: transform 100ms ease-in-out;
+}
+.micro-display .mc-logo:hover{
+    transform: scale(1.02);
+}
+
+.micro-display .mc-logo::before,.micro-display .mc-logo::after
+{
+    content:attr(data-before);
+    color:white;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px #FA3E3E;
+    background:#FA3E3E;
+}
+.micro-display .mc-logo::after{
+    content:'';
+}
+
+.micro-display.transition{
+    animation:splash 70ms forwards reverse;
+}
+@keyframes splash {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.07);
+    }
+    70%{
+        transform: scale(1.03);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
