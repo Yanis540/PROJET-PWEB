@@ -45,7 +45,17 @@
 
             }
         }
-        unset($_POST['submit-register']);
+        catch(Exception $e)
+        {
+            echo "
+              <script>
+                document.body.classList.add('other');
+              </script>
+            ";
+        }
+        finally{
+            unset($_POST['submit-register']);
+        }
         
     }
     

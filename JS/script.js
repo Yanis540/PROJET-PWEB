@@ -1,4 +1,4 @@
-import Toast from './Toast/Toast.js'
+import Toast from '../Toast/Toast.js'
 
 let navLogo=document.getElementById('nav-logo-name');
 

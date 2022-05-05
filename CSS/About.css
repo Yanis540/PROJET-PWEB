@@ -23,7 +23,7 @@
     opacity: 0;
     transform: translate(150%,150%);
     transition: 
-     transform 100ms ease-in-out,
+     transform 200ms ease-in-out,
      opacity 300ms ease-in-out
     ;
 }

@@ -61,10 +61,10 @@
     <link rel="stylesheet" href="./CSS/Navbar.css">
     <link rel="stylesheet" href="./CSS/Modal.css">
     <link rel="stylesheet" href="./CSS/main.css">
-    <script src="./script.js"defer type="module" ></script>
-    <script src="./dark-light.js"defer ></script>
-    <script src="./intersection-observer.js"defer ></script>
-    <script src="./messenger.js"defer ></script>
+    <script src="./JS/script.js"defer type="module" ></script>
+    <script src="./JS/dark-light.js"defer ></script>
+    <script src="./JS/intersection-observer.js"defer ></script>
+    <script src="./JS/messenger.js"defer ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel = "icon" href = "./SVG/MC-LOGO.svg"
         type = "image/x-icon">
