@@ -84,7 +84,7 @@ a.landing-button{
     box-shadow: 5px 12px 15px -3px rgba(0,0,0,0.1);
     transition: all 300ms ease-in-out;
 }
-a.about{
+a.structures{
     background:var(--front-color);
     color:var(--background-color);
 }
@@ -92,7 +92,7 @@ a.landing-button:hover{
     background:var(--front-color) ;
     color:var(--background-color);
 }
-a.about:hover{
+a.structures:hover{
     
     background:var(--background-color) ;
     color:var(--front-color);
