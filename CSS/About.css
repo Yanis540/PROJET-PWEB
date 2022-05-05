@@ -10,44 +10,29 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    opacity: 0;
     flex-wrap: wrap;
     right:45px;
     bottom: 0;
     width:var(--width-about);
     overflow-y: scroll;
-    transform: unset;
     background-color: #202c38;
     border:2px solid var(--chat-color);
     height: 500px;
     z-index: 100;
     border-radius: 7px;
-    animation: popconvreturn 300ms ease-in-out forwards;
-
+    opacity: 0;
+    transform: translate(150%,150%);
+    transition: 
+     transform 100ms ease-in-out,
+     opacity 300ms ease-in-out
+    ;
 }
 
 .about-us.show{
     opacity: 1;
     transform: unset;
-    animation: popconv 300ms ease-in-out alternate;
+}
 
-}
-@keyframes popconv {
-    0%{
-        transform:  translate(150%,150%);
-    }
-    100%{
-        transform:unset;
-    }
-}
-@keyframes popconvreturn {
-    0%{
-       transform:unset;
-    }
-    100%{
-        transform:  translate(150%,150%);
-    }
-}
 .about-us::-webkit-scrollbar{
   display: none;
 }
