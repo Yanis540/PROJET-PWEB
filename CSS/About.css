@@ -3,6 +3,7 @@
     position: fixed;
     right:3px;
     bottom:3px;
+    z-index: 3000;
 }
 
 .about-us{
@@ -14,6 +15,7 @@
     right:45px;
     bottom: 0;
     width:var(--width-about);
+    max-width: var(--width-about);
     overflow-y: scroll;
     background-color: #202c38;
     border:2px solid var(--chat-color);

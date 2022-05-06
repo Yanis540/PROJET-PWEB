@@ -277,6 +277,13 @@ h2.end-website
     }   
     .landing-button{
         flex-direction: column;
+      gap:10px;
+
+    }
+    .landing-images{
+      flex-direction: column;
+      gap:10px;
+
     }
 }
 @media screen and (max-width:420px) 
@@ -284,7 +291,7 @@ h2.end-website
     :root{
         --conversation-width:180px;
         --conversation-height:300px;
-
+        --width-about:80%;
     }   
     .landing-button{
         flex-direction: column;

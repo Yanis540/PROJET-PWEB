@@ -64,7 +64,7 @@
                 </div>
                 <div class="landing-button">
                     <a class="landing-button events" href="#events">Our Events</a>
-                    <a class="landing-button structures" href="#structures">Club Organization</a>
+                    <a class="landing-button structures" href="#structures">Our Structures</a>
                 </div>
                 <div class="landing-guid">
                     <div class="landing-guid-img">

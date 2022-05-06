@@ -74,7 +74,7 @@ h2.landing-desc-title {
 a.landing-button{
     background: var(--background-color);
     display: inline-block;
-    width:max-content;
+    width:fit-content;
     text-align: center;
     padding:var(--padding-button);
     border-radius: var(--border-radius);
