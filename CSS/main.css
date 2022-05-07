@@ -24,6 +24,7 @@
     --conversation-width:300px;
     --conversation-height:250px;
     --width-about:17rem;
+    --about-right:3%;
 }
 
 *{
@@ -254,6 +255,7 @@ h2.end-website
         --border-size:6px;
         /* --events-grid:repeat(1,1fr) */
         --stats-grid:repeat(1,1fr);
+        --about-right:25%;
 
     }
 

@@ -97,7 +97,7 @@
 
                 </div>  
                 <div class="message-right">
-                 <a id='close-messenger'class="close-messenger">&times;</a>
+                 <a id='close-messenger'data-close-button class="close-messenger">&times;</a>
                 </div>
             </div>
             

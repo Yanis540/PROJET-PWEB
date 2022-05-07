@@ -91,6 +91,7 @@
         <?php include('./Components/Register.php') ?>
 
         <div id="modal-overlay"></div> 
+        <div id="overlay-messenger"></div>
      <?php }?>
 
        

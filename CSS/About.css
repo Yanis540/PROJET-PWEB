@@ -7,19 +7,22 @@
 }
 
 .about-us{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    right:45px;
+    right:0;
+    left:0;
+    margin:auto;
+    margin-left:0;
     bottom: 0;
     width:var(--width-about);
     max-width: var(--width-about);
     overflow-y: scroll;
     background-color: #202c38;
     border:2px solid var(--chat-color);
-    height: 500px;
+    height: 75vh;
     z-index: 100;
     border-radius: 7px;
     opacity: 0;
