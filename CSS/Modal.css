@@ -65,7 +65,6 @@
     right: 0;
     bottom: 0;
     background-color: #202c38;
-    filter: blur(1px);
     pointer-events: none;
     
 }
@@ -74,7 +73,7 @@
     opacity: .4;
     pointer-events: all;
     z-index: 3;
-    filter: blur(3px);
+    
 }
 .modal-form{
     display: flex;
