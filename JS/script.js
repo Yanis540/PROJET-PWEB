@@ -148,6 +148,16 @@ registerForm.addEventListener('submit',(e)=>{
       })
       return 
     }
+    if(registerEmail.length>75 ||firstName.length>75 || lastName.length>75 )
+    {
+      e.preventDefault()
+      const toast=new Toast({
+        position:screen.width>600 ? 'top-right':'top-center',
+        text:'email, first name and last name should be 75 caraters max',
+        pauseOnHover:true
+      })
+      return 
+    }
   }
   
 })

@@ -97,7 +97,7 @@
                         <option value="M1">M1</option>
                         <option value="M2">M2</option>
                     </select>
-                    <label for="register-year" id="register-year-label" class="form-label">Year:</label>
+                    <label for="register-year" id="register-year-label" class="form-label enter">Year:</label>
                 </div>
                 <div class="class-input">
                     <select name="register-faculty" id="register-faculty" class="form-input" >
@@ -111,7 +111,7 @@
                         <option value="FGC">FGC</option>
                         <option value="FGP">FGP</option>
                     </select>
-                    <label for="register-faculty" id="register-faculty-label" class="form-label">Faculty:</label>
+                    <label for="register-faculty" id="register-faculty-label" class="form-label enter">Faculty:</label>
                 </div>
                 <p>Show us your motivations to join us </p>
                 <div class="class-input">
