@@ -6,25 +6,26 @@ let triangle=document.getElementById('triangle');
 
 const modalOverlayMessenger=document.getElementById('overlay-messenger');
 microDisplay.addEventListener('click',(e)=>{
-
-   aboutPage.classList.toggle('show');
-   microDisplay.classList.toggle('transition');
-   triangle.classList.toggle('show');
-   if(aboutPage.classList.contains('show')) modalOverlayMessenger.classList.add('active');
-   else modalOverlayMessenger.classList.remove('active');
+   handleOpenClose(e);
    if(microLogoMesg.getAttribute('data-before')==1)microLogoMesg.setAttribute('data-before',0);
 })
 
 closeMessenger.addEventListener('click',(e)=>{
-    handleClose(e);
+    handleOpenClose(e);
 })
 modalOverlayMessenger.addEventListener('click',(e)=>{
-    handleClose(e);
+    handleOpenClose(e);
 })
-const handleClose=(e)=>{
+const handleOpenClose=(e)=>{
     if(aboutPage.classList.contains('show'))
     {
         aboutPage.classList.remove('show');
+        triangle.classList.remove('show');
         modalOverlayMessenger.classList.remove('active');
+    }
+    else{
+        aboutPage.classList.add('show');
+        triangle.classList.add('show');
+        modalOverlayMessenger.classList.add('active');
     }
 }

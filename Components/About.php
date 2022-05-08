@@ -45,7 +45,7 @@
             </svg>
         </div>
     </div>
-    <div id='about'class="about-us">
+    <div id='about'class="about-us ">
         <div class="about-container">
             <div class="message-top">
                 <div class="message-left">
@@ -138,6 +138,9 @@
                 <div class="message-left">
                     <img class="conversation-img" src="./SVG/MICRO-MCTF2.jpg" alt="">  
                 </div>
+                <div class="message-left">
+                    <img class="conversation-img" src="./SVG/takafa-2.JPG" alt="">  
+                </div>
                 <div class="message-right">
                     <p class="conversation-right">Alright Thank you !</p>
                 </div>
@@ -148,5 +151,5 @@
             </div>
         </div>
     </div>
-    <div class="triangle"id='triangle'></div>
+    <div class="triangle "id='triangle'></div>
 </div>
