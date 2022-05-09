@@ -21,6 +21,12 @@
     padding:20px;
     padding-bottom:20px;
     box-shadow: 7px 19px 22px -4px rgba(0,0,0,0.1);
+    transition: all  150ms ease-in-out ;
+}
+.event-element:hover{
+    transform: scale(1.03);
+    background-color: var(--background-color );
+    color:var(--front-color);
 }
 .event-img{
     display: flex;

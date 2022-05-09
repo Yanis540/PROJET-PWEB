@@ -5,6 +5,10 @@
     <h1 class="events-title">Our Events</h1>
     <p class="events-desc">Discover the events we hold all year round</p>
     <div class="events">
+     <?php if(sizeof($events)==0){?>
+        <h1>There's no event 😔😔 </h1>
+     <?php }?>
+
      <?php foreach($events as $event){ ?>
         <div class="event-element" style="position: relative;">
             <?php 

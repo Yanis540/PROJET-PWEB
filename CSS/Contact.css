@@ -69,16 +69,18 @@ form > p{
     cursor: pointer;
     outline: none;
     padding: 1.25rem;
-    background: none;    
+    background: none;
+    transition: all 150ms ease-in-out;    
 }
-
+.form-input.enter {
+    border: 2.5px solid var(--chat-color);
+}
 
 
 .form-label {
     position: absolute;
     left: .8rem;
     top: 0.8rem;
-    border-radius: 5px;
     padding: 0 0.5rem;
     color: var(--front-color);
     cursor: text;

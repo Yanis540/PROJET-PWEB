@@ -1,5 +1,5 @@
 <div>
-   <div id='micro-display'class="micro-display">
+    <div id='micro-display'class="micro-display">
         <div class="mc-logo" data-before='1'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -100 400 400">
                 <defs></defs>
@@ -44,7 +44,7 @@
                 </g>
             </svg>
         </div>
-    </div>
+     </div>
     <div id='about'class="about-us ">
         <div class="about-container">
             <div class="message-top">
@@ -150,6 +150,6 @@
                 </div>
             </div>
         </div>
-    </div>
+     </div>
     <div class="triangle "id='triangle'></div>
 </div>

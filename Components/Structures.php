@@ -1,7 +1,7 @@
 <div id="structures"class="structures-page paire">
     <h1 class="structures-title">Club Organization</h1>
     <p class="structures-desc">Read up on the internal workings of the club.</p>
-    <h1 class="structures-title" style='text-align:center;'>Sections</h1>
+    <h1 class="structures-title" style='text-align:center;border:none;'>Sections</h1>
     <div class="structures">
         <div class="left-structure">
             <div class="structure left-top">
@@ -52,7 +52,7 @@
             </div>
         </div>
     </div>
-    <h1 class="structures-title" style='text-align:center;'>Departments</h1>
+    <h1 class="structures-title" style='text-align:center;border:none;'>Departments</h1>
     <div class="structures">
         <div class="left-structure">
             <div class="structure left-top">
@@ -104,9 +104,3 @@
         </div>
     </div>
 </div>
-<!-- <div class="content">
-                    <h2 class="structure-name">Design Section</h2>
-                    <span class="structure-description">
-                        The design section is the section in charge of the graphic identity of the club. From the graphic chart to every post we do, design team creates wonderful templates and work on creating the club's brand. Their work concentrates on Adobe Softwares, like Illustrator and Photoshop. It's a great opportunity to learn within an indulgent community.
-                    </span>
-                </div> -->

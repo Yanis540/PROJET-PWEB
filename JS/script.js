@@ -8,9 +8,13 @@ inputs.forEach(input=>{
   const label=input.nextElementSibling;
   input.addEventListener('focusin',(e)=>{
     label.classList.add('enter');
+    input.classList.add('enter');
   })
   input.addEventListener('focusout',(e)=>{
-    if(input?.value.length==0)label.classList.remove('enter');
+    if(input?.value.length==0){
+      label.classList.remove('enter');
+      input.classList.remove('enter');
+    }
   })
 })
 
