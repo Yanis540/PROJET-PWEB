@@ -19,6 +19,7 @@
     width:var(--width-about);
     max-width: var(--width-about);
     overflow-y: scroll;
+    overflow-x: hidden;
     background-color: #202c38;
     border:2px solid var(--chat-color);
     height: 75vh;

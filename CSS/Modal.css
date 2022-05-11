@@ -70,7 +70,7 @@
 }
   
 #modal-overlay.active,#overlay-messenger.active {
-    opacity: .4;
+    opacity: .8;
     pointer-events: all;
     z-index: 3;
     

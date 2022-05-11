@@ -7,6 +7,7 @@ let triangle=document.getElementById('triangle');
 const modalOverlayMessenger=document.getElementById('overlay-messenger');
 microDisplay.addEventListener('click',(e)=>{
    handleOpenClose(e);
+   microDisplay.classList.toggle('transition');
    if(microLogoMesg.getAttribute('data-before')==1)microLogoMesg.setAttribute('data-before',0);
 })
 
