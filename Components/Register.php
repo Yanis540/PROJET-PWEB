@@ -68,7 +68,7 @@
     <div class="modal-body">
         <div class="modal-form">
             <h1 class="form-title">Form:</h1>
-            <form id='register-form'action="" method="POST" class="separate">
+            <form id='register-form'action="$_SERVER['PHP_SELF']" method="POST" class="separate">
                 <div class="class-input">
                     <input type="number" id="matricule"name="matricule" class="form-input" autocomplete="off" placeholder=" ">
                     <label for="matricule" class="form-label">Matricule:</label>

@@ -160,7 +160,29 @@ body{
     grid-template-columns: repeat(2 , 1fr);
 }
 
-
+svg.dash   {
+    position: absolute;
+    display:flex;
+    bottom:-50px;
+    fill:var(--front-color);
+    
+}
+svg.dash .path {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 0;
+    width:300px;
+    overflow:visible;
+    display: block;
+    animation: dash 3s  forwards  ;
+}
+@keyframes dash {
+    from {
+      stroke-dashoffset: 320;
+    }
+    to {
+      stroke-dashoffset: -320;
+    }
+  }
 
 
 /*              EVENTS PAGE               */

@@ -82,8 +82,9 @@ contactForm.addEventListener('submit',(e)=>{
 
   if(contactMail.length==0 ||!message|| message?.length==0)
   {
-  e.preventDefault();
-
+    e.preventDefault();
+    if(contactMail.length==0)document.getElementById('contact-email').classList.add('error');
+    if(!message|| message?.length==0)document.getElementById('contact-message').classList.add('error');
     const toast=new Toast({
       position:screen.width>600 ? 'top-right':'top-center',
       text:'Add email and msg',
@@ -129,7 +130,7 @@ registerForm.addEventListener('submit',(e)=>{
 
   let registerMessageInput=document.getElementById('register-message')
   let registerMessage=registerMessageInput?.value
-
+  const arrayInputs=[matriculeInput,firstNameInput,lastNameInput,registerEmailInput,registerPhoneInput,registerMessageInput]
   if(firstName.length==0||lastName.length==0||registerMessage.length==0||!matricule|| !registerPhone)
   {
     e.preventDefault();
@@ -137,6 +138,13 @@ registerForm.addEventListener('submit',(e)=>{
       position:screen.width>600 ? 'top-right':'top-center',
       text:'Add All fields 🙈',
       pauseOnHover:true
+    })
+    arrayInputs.map(input=>{
+      if(!input||input?.value.length==0)
+      {
+        input.classList.add('error');
+        console.log(input);
+      }
     })
     return 
   }
@@ -150,11 +158,15 @@ registerForm.addEventListener('submit',(e)=>{
         text:'you are not too motivated 😔',
         pauseOnHover:true
       })
+      registerMessageInput.classList.add('error');
       return 
     }
     if(registerEmail.length>75 ||firstName.length>75 || lastName.length>75 )
     {
-      e.preventDefault()
+      e.preventDefault();
+      arrayInputs.map(input=>{
+        if(input &&input.value&& input.value.length>75) input.classList.add('error');
+      })
       const toast=new Toast({
         position:screen.width>600 ? 'top-right':'top-center',
         text:'email, first name and last name should be 75 caraters max',

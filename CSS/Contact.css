@@ -75,7 +75,9 @@ form > p{
 .form-input.enter {
     border: 2.5px solid var(--chat-color);
 }
-
+.form-input.error{
+    border: 2.5px solid rgb(196, 39, 0);
+}
 
 .form-label {
     position: absolute;
