@@ -2,12 +2,24 @@ let microDisplay=document.getElementById('micro-display');
 let aboutPage=document.getElementById('about');
 let microLogoMesg=microDisplay.firstElementChild;
 let closeMessenger=document.getElementById('close-messenger');
+let clickMessage=document.getElementById('click-message')
+let clickTriangle=document.getElementById('triangle-message')
 let triangle=document.getElementById('triangle');
 
 const modalOverlayMessenger=document.getElementById('overlay-messenger');
 microDisplay.addEventListener('click',(e)=>{
-   handleOpenClose(e);
    microDisplay.classList.toggle('transition');
+   if(!clickTriangle.classList.contains('hide'))
+   {
+    clickTriangle.classList.add('hide');
+    clickMessage.classList.add('hide');  
+   }
+
+   setTimeout(()=>{
+    handleOpenClose(e);
+
+   },150);
+
    if(microLogoMesg.getAttribute('data-before')==1)microLogoMesg.setAttribute('data-before',0);
 })
 
