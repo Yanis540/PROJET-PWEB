@@ -18,7 +18,7 @@ microDisplay.addEventListener('click',(e)=>{
    setTimeout(()=>{
     handleOpenClose(e);
 
-   },150);
+   },75);
 
    if(microLogoMesg.getAttribute('data-before')==1)microLogoMesg.setAttribute('data-before',0);
 })

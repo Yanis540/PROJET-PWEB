@@ -43,7 +43,7 @@
                         </g>
                   </g>
                   </svg>
-            <!-- <img class="landing-logo-img" src="./SVG/MC-LOGO.svg" alt="" > -->
+            
             </div>
             <div class="landing-desc">
                   <h1 class="landing-desc-title">We Help Students Navigate the Tech Universe</h1>
