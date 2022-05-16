@@ -92,7 +92,7 @@ contactForm.addEventListener('submit',(e)=>{
     })
   }
   else{
-    location.href = "mailto:contact@microclub.net"+'?cc='+contactMail+'&subject=Contact'+'&body='+message
+    location.href = "mailto:yanistabellout4@gmail.com"+'?cc='+contactMail+'&subject=Contact'+'&body='+message
     contactForm.reset()
     const toast=new Toast({
       position:screen.width>600 ? 'top-right':'top-center',

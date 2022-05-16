@@ -155,7 +155,7 @@
 
     <div class="triangle-message "id='triangle-message'></div>
     <div class="click-message" id='click-message'>
-        <h4 class="message-click">Hi! Welcome...</h4>
+        <h4 class="message-click">Click</h4>
     </div>
 
 </div>

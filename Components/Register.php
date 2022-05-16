@@ -71,7 +71,7 @@
             <form id='register-form'action="$_SERVER['PHP_SELF']" method="POST" class="separate">
                 <div class="class-input">
                     <input type="number" id="matricule"name="matricule" class="form-input" autocomplete="off" placeholder=" ">
-                    <label for="matricule" class="form-label">Matricule:</label>
+                    <label for="matricule" class="form-label">Registration Number</label>
                 </div>
                 <div class="class-input">
                     <input type="text" id="first-name"name="first-name" class="form-input" autocomplete="off" placeholder=" ">

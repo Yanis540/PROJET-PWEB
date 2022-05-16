@@ -9,12 +9,6 @@ let triangle=document.getElementById('triangle');
 const modalOverlayMessenger=document.getElementById('overlay-messenger');
 microDisplay.addEventListener('click',(e)=>{
    microDisplay.classList.toggle('transition');
-   if(!clickTriangle.classList.contains('hide'))
-   {
-    clickTriangle.classList.add('hide');
-    clickMessage.classList.add('hide');  
-   }
-
    setTimeout(()=>{
     handleOpenClose(e);
 
@@ -34,11 +28,26 @@ const handleOpenClose=(e)=>{
     {
         aboutPage.classList.remove('show');
         triangle.classList.remove('show');
+        clickTriangle.classList.remove('hide');
+        clickMessage.classList.remove('hide'); 
         modalOverlayMessenger.classList.remove('active');
     }
-    else{
+    else
+    {
         aboutPage.classList.add('show');
         triangle.classList.add('show');
+        clickTriangle.classList.add('hide');
+        clickMessage.classList.add('hide');  
+        handleRemoveClick();
         modalOverlayMessenger.classList.add('active');
+        console.log("here");
     }
 }
+const handleRemoveClick=async()=>{
+    setTimeout(()=>{
+        clickTriangle.classList.add('hide');
+        clickMessage.classList.add('hide');  
+     },5000)
+
+}
+handleRemoveClick();
