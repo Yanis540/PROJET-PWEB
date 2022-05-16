@@ -330,7 +330,25 @@ span.riples{
     border-radius: 50%;
     animation:riples 1s linear infinite;
 }
+svg.moon-background{
+    fill:var(--front-color);
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+}
+.moon-background{ animation: clouds2 6s infinite ease-in-out; z-index: 0;}
+.moon-background.right{
+    right:0;
+}
 /*           animations                 */
+@keyframes clouds2 { 
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
 @keyframes riples {
     0%{
         width: 0;

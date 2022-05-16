@@ -70,7 +70,9 @@
         type = "image/x-icon">
 </head>
 <body class="light-theme">
-    <div class="background"></div>
+    <div class="background">
+    <?php include('./Components/Falls.php') ?>
+    </div>
     <div class="container">
      <?php if($connection){?>
         <!--Navbar-->

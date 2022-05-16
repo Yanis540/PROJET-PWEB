@@ -40,7 +40,6 @@ const handleOpenClose=(e)=>{
         clickMessage.classList.add('hide');  
         handleRemoveClick();
         modalOverlayMessenger.classList.add('active');
-        console.log("here");
     }
 }
 const handleRemoveClick=async()=>{
