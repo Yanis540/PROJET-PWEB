@@ -336,7 +336,7 @@ svg.moon-background{
     align-items: flex-start;
     position: absolute;
 }
-.moon-background{ animation: clouds2 6s infinite ease-in-out; z-index: 0;}
+.moon-background{ animation: clouds2 10s infinite ease-in-out; z-index: 0;}
 .moon-background.right{
     right:0;
 }

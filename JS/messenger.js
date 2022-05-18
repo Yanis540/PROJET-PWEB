@@ -20,7 +20,7 @@ microDisplay.addEventListener('click',(e)=>{
 closeMessenger.addEventListener('click',(e)=>{
     handleOpenClose(e);
 })
-modalOverlayMessenger.addEventListener('click',(e)=>{
+modalOverlayMessenger?.addEventListener('click',(e)=>{
     handleOpenClose(e);
 })
 const handleOpenClose=(e)=>{
@@ -28,8 +28,6 @@ const handleOpenClose=(e)=>{
     {
         aboutPage.classList.remove('show');
         triangle.classList.remove('show');
-        clickTriangle.classList.remove('hide');
-        clickMessage.classList.remove('hide'); 
         modalOverlayMessenger.classList.remove('active');
     }
     else

@@ -92,9 +92,9 @@ form > p{
 textarea::-webkit-scrollbar{
     display:none;
 }
-.form-label.enter
+.modal-form .form-label.enter
 {
-  top: -0.5rem;
+  top: -0.3rem;
   font-size: 0.65rem;
   left: 0.8rem;
 }

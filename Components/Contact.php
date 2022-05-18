@@ -1,3 +1,15 @@
+<?php 
+   if(isset($_POST['submit-contact']))
+   { 
+    echo "
+        <script>
+            document.body.classList.add('great');
+        </script>
+    ";
+   }
+
+
+?>
 <div id='contact'class="contact-page impaire">
     <div class="contacting">
         <div class="contact-element contact-infos">

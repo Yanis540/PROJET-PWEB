@@ -18,7 +18,8 @@
             recruit (matricule,first_name,last_name,email,phone,year,faculty,message)
             values($matricule,'$first_name','$last_name','$email',$phone,'$year','$faculty','$message');
             ";
-            $results=mysqli_query($connection,$sql);    
+            $results=mysqli_query($connection,$sql);  
+           echo "<script type='text/javascript'></script>";
             echo "
                 <script>
                  document.body.classList.add('added');
@@ -54,7 +55,8 @@
             ";
         }
         finally{
-            unset($_POST['submit-register']);
+            unset($_POST);
+            header('Location:'.$_SERVER['PHP_SELF']);
         }
         
     }
@@ -68,7 +70,7 @@
     <div class="modal-body">
         <div class="modal-form">
             <h1 class="form-title">Form:</h1>
-            <form id='register-form'action="$_SERVER['PHP_SELF']" method="POST" class="separate">
+            <form id='register-form'action="" method="POST" class="separate">
                 <div class="class-input">
                     <input type="number" id="matricule"name="matricule" class="form-input" autocomplete="off" placeholder=" ">
                     <label for="matricule" class="form-label">Registration Number</label>

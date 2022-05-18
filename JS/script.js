@@ -47,7 +47,7 @@ openModalButtons.forEach(button => {
   })
 })
 
-modalOverlay.addEventListener('click', () => {
+modalOverlay?.addEventListener('click', (e) => {
   const modals = document.querySelectorAll('.modal.active')
   modals.forEach(modal => {
     closeModal(modal)
@@ -93,12 +93,6 @@ contactForm.addEventListener('submit',(e)=>{
   }
   else{
     location.href = "mailto:yanistabellout4@gmail.com"+'?cc='+contactMail+'&subject=Contact'+'&body='+message
-    contactForm.reset()
-    const toast=new Toast({
-      position:screen.width>600 ? 'top-right':'top-center',
-      text:'Great 😀😁',
-      pauseOnHover:true
-    })
   }
 })
 
@@ -106,7 +100,7 @@ contactForm.addEventListener('submit',(e)=>{
 /* register form   */
 let registerForm=document.getElementById('register-form');
 
-registerForm.addEventListener('submit',(e)=>{
+registerForm?.addEventListener('submit',(e)=>{
   let matriculeInput=document.getElementById('matricule')
   let matricule=matriculeInput?.value
 
@@ -143,7 +137,6 @@ registerForm.addEventListener('submit',(e)=>{
       if(!input||input?.value.length==0)
       {
         input.classList.add('error');
-        console.log(input);
       }
     })
     return 
@@ -174,6 +167,7 @@ registerForm.addEventListener('submit',(e)=>{
       })
       return 
     }
+    window.top.location='./';
   }
   
 })
@@ -206,4 +200,13 @@ if(body.classList.contains('other'))
     pauseOnHover:true
   })
   body.classList.remove('other');
+}
+if(body.classList.contains('great'))
+{
+  const toast=new Toast({
+    position:screen.width>600 ? 'top-right':'top-center',
+    text:'Great 😀😁',
+    pauseOnHover:true
+  })
+  body.classList.remove('great');
 }
