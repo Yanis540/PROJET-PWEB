@@ -1,5 +1,5 @@
 <?php 
-   if(isset($_POST['submit-contact']))
+   if(isset($_POST['submit-contact'])&&$_POST['submit-contact']==$_SESSION['rand_contact'])
    { 
     echo "
         <script>
@@ -70,6 +70,10 @@
         <div class="contact-element contact-form">
             <h1 class="contact-title">Your Feedbacks</h1>
             <div class="form">
+                <?php
+                    $rand_contact=rand();
+                    $_SESSION['rand_contact']=$rand_contact;
+                ?>
                 <form id='contact-form' action="" method="POST">
                     <div class="class-input">
                         <input type="email" id="contact-email"name="contact-email" class="form-input" autocomplete="off" placeholder=" ">
@@ -80,7 +84,7 @@
                         <textarea type="text" id="contact-message"name="contact-message" class="form-input message-textarea" autocomplete="off" placeholder=" "></textarea>
                         <label for="contact-message" id="contact-message-label" class="form-label">Message:</label>
                     </div>
-                    <button name='submit-contact'type="submit" id="contact-button" class="submit-button">SEND IT </button>
+                    <button name='submit-contact' value="<?php echo $rand_contact; ?>"type="submit" id="contact-button" class="submit-button">SEND IT </button>
                 </form>
                 </div>
         </div>

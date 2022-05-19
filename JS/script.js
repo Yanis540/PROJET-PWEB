@@ -167,7 +167,7 @@ registerForm?.addEventListener('submit',(e)=>{
       })
       return 
     }
-    window.top.location='./';
+    
   }
   
 })
@@ -175,6 +175,7 @@ registerForm?.addEventListener('submit',(e)=>{
 let body=document.body;
 if(body.classList.contains('added'))
 {
+
   const toast=new Toast({
     position:screen.width>600 ? 'top-right':'top-center',
     text:'We added You 😀😁',

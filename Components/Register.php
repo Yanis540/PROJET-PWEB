@@ -1,8 +1,9 @@
 <?php 
     include ('./db_connect.php');
     // handle registration 
-    if(isset($_POST['submit-register']))
+    if(isset($_POST['submit-register'])&&$_POST['submit-register']==$_SESSION['rand'])
     {
+        
         $matricule=intval(mysqli_real_escape_string($connection,$_POST['matricule']));
         $first_name=mysqli_real_escape_string($connection,$_POST['first-name']);
         // $first_name=mysqli_real_escape_string($connection,$_POST['first-name']);
@@ -12,19 +13,13 @@
         $year=mysqli_real_escape_string($connection,$_POST['register-year']);
         $faculty=mysqli_real_escape_string($connection,$_POST['register-faculty']);
         $message=mysqli_real_escape_string($connection,$_POST['register-message']);
-        // echo $matricule,$first_name,$last_name,$email,$phone,$year,$faculty,$message;
         try{
             $sql="insert into 
             recruit (matricule,first_name,last_name,email,phone,year,faculty,message)
             values($matricule,'$first_name','$last_name','$email',$phone,'$year','$faculty','$message');
             ";
             $results=mysqli_query($connection,$sql);  
-           echo "<script type='text/javascript'></script>";
-            echo "
-                <script>
-                 document.body.classList.add('added');
-                </script>
-           ";
+           echo "<script type='text/javascript'>document.body.classList.add('added');</script>";
         }
         catch(mysqli_sql_exception $e)
         {
@@ -54,10 +49,7 @@
               </script>
             ";
         }
-        finally{
-            unset($_POST);
-            header('Location:'.$_SERVER['PHP_SELF']);
-        }
+        
         
     }
     
@@ -71,6 +63,10 @@
         <div class="modal-form">
             <h1 class="form-title">Form:</h1>
             <form id='register-form'action="" method="POST" class="separate">
+                <?php
+                    $rand=rand();
+                    $_SESSION['rand']=$rand;
+                ?>
                 <div class="class-input">
                     <input type="number" id="matricule"name="matricule" class="form-input" autocomplete="off" placeholder=" ">
                     <label for="matricule" class="form-label">Registration Number</label>
@@ -121,7 +117,7 @@
                     <label for="register-message" id="register-message-label" class="form-label">Message:</label>
                 </div>
                 
-                <button name='submit-register' type="submit" id="register-button" class="submit-button">SEND IT </button>
+                <button name='submit-register'value="<?php echo $rand; ?>"  type="submit" id="register-button" class="submit-button">SEND IT </button>
             </form>
         </div>
         <div class="modal-animations">
