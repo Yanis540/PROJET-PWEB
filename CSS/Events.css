@@ -56,8 +56,6 @@
 }
 .event-element:hover{
     transform: scale(1.03);
-    /* background-color: var(--background-color );
-    color:var(--front-color); */
 }
 .event-element:hover.event-element::after{
     transform:scaleX(1);
