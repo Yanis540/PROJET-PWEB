@@ -2,7 +2,11 @@
 $connection;
    try{
        global $connection;
-     $connection=mysqli_connect('localhost','root','Yanis123','db_pweb');
+       $host='localhost';
+       $user='root';
+       $password='Yanis123';
+       $db_name='db_pweb';
+     $connection=mysqli_connect($host,$user,$password,$db_name);
    }
   catch(mysqli_sql_exception $e)
   {
