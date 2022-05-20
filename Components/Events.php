@@ -18,14 +18,16 @@
                 $event_date=htmlspecialchars($event['date_event']);
             ?>
             <div class="event-img">
-              
-              <img src="<?php echo $event_link_img?>" alt="">
+              <?php if($event_name&& strlen($event_name)>0) {?>
+                <img src="<?php echo $event_link_img?>" alt="">
+              <?php } ?>
             </div>
             <div class="event-text">
              <h1 class="event-title"><?php echo $event_name ?></h1>
              <p class="event-desc"><?php echo $event_description ?></p>
-             <span class="event-desc" style="position:absolute;bottom:10px; right:20px;font-size:10px;"><?php echo $event_date ?></span>
            </div>
+           <span class="event-desc"><?php echo $event_date ?></span>
+
         </div>
      <?php } ?>
         
