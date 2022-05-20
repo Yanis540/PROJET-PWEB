@@ -2,7 +2,7 @@
     display: flex ;
     height: 100%;
     align-items: center;
-    padding:07px 0;
+    /* padding:07px 0; */
     justify-items: center;
 }
 .navbar-left{
@@ -14,11 +14,14 @@
     border-radius: 7px;
     align-items: center;
     justify-content: center;
+    height:100%;
 }
 
 .nav-logo
 {
-    display:inline-block;
+    display:flex;
+    align-items: center;
+    flex-shrink: 0;
     height: 100%;
     width: 60px;
     /* color:white; */

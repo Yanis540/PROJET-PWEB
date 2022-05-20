@@ -7,13 +7,19 @@
     gap:15px;
 }
 
-.contact-infos-up
+.contact-infos-up,.contact-infos-center
 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 
+}
+.contact-infos-center{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start ;
+    
 }
 .contact-logo{
     height: 70px;
@@ -35,6 +41,9 @@ h2.contact-more{
     align-items: center;
     padding:10px;
     text-align: center;
+}
+.contact-infos,.contact-social{
+   padding-top:20px;
 }
 h1.contact-title
 {
@@ -109,7 +118,7 @@ textarea.form-input{
     padding:20px;
 }
 .contact-social{
-    padding-top:15px;
+    padding-top:35px;
     display: block;
     justify-content: center;
 }

@@ -79,7 +79,7 @@
                         <input type="email" id="contact-email"name="contact-email" class="form-input" autocomplete="off" placeholder=" ">
                         <label for="contact-email" class="form-label">Email:</label>
                     </div>
-                    <p>We need your email to respond for your message.</p>
+                    <p>We need your email to respond to your message.</p>
                     <div class="class-input">
                         <textarea type="text" id="contact-message"name="contact-message" class="form-input message-textarea" autocomplete="off" placeholder=" "></textarea>
                         <label for="contact-message" id="contact-message-label" class="form-label">Message:</label>

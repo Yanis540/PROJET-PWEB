@@ -17,8 +17,8 @@ inputs.forEach(input=>{
     }
   })
 })
-
-navLogo.addEventListener('click',(e)=>{
+let navBarLeft=document.getElementById('navbar-left')
+navBarLeft.addEventListener('click',(e)=>{
   createRiples(navLogo,e)
 })
 
